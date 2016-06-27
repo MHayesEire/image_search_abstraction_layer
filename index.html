@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Search</title>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <style>
+        body { padding-top:50px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Enter Search Term.</h1>
+            <form method="post" action="/">
+                Search Term: 
+                <input type="text" name="query1"  placeholder="Catz">
+                Offset: 
+                <input type="text" name="offset"  placeholder="10">
+                <input type="submit" value="Search">
+            </form>
+            <br />
+            <form method="post" action="/latest">
+                Recent Search Queries: <input type="submit" value="Show">
+            </form>            
+        </div>
+    </div>
+    
+</body>
+</html>

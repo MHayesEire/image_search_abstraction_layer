@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Image Search Results</title>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<style>
+body { padding-top:50px; }
+</style>    
+</head>
+<body>
+<div class="container">
+    <form>
+<input type="button" value="Back" 
+ onClick="history.go(-1);return true;"> 
+</form>
+    <h1><span id="val">Results - <%=tagline %>
+    </span></h1>
+<h2>Data:</h2>
+<ul  class="jumbotron">
+<ul>[{"
+<% for(var i=0; i<term.length; i++) {%>
+   <li><b>"url" :</b>"<%= term[i].url %>"</li>   
+   <li><b>"snippet" :</b>"<%= term[i].title %>"</li>
+   <li><b>"thumbnail" :</b>"<%= term[i].thumbnail.url %>"</li>
+   <li><b>"context" :</b>"<%= term[i].sourceUrl %>",</li>
+<% } %>
+}]</ul>
+<%if (error =="") { %>
+
+<% }else{ %>
+<li><b style="color: red;"><%=error %></b></li>
+<% } %>
+</ul>
+</div>
+</body>
+</html>
